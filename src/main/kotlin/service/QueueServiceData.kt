@@ -1,3 +1,5 @@
+package service
+
 data class QueueServiceRecord<out K, out V>(val key: K, val value: V)
 data class QueueServiceResponse<out K, out V>(val responseCode: ResponseCode, val record: QueueServiceRecord<K, V>?)
 

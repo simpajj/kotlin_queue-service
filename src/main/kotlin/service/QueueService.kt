@@ -1,3 +1,5 @@
+package service
+
 /**
  * An interface defining methods of a Queue Service
  * handling records of an arbitrary type T and

@@ -1,3 +1,5 @@
+package service
+
 import com.google.common.base.Ticker
 import com.google.common.cache.*
 import java.util.concurrent.ConcurrentLinkedQueue
