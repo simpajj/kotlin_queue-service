@@ -9,6 +9,9 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.guava:guava-parent:21.0"
+        classpath "com.google.guava:guava-testlib:21.0"
+        classpath "io.kotlintest:kotlintest:1.3.5"
     }
 }
 
@@ -20,27 +23,7 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-}
-group 'salloum'
-version '1.0-SNAPSHOT'
-
-buildscript {
-    ext.kotlin_version = '1.0.5'
-
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
-apply plugin: 'kotlin'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "com.google.guava:guava-parent:21.0"
+    compile "com.google.guava:guava-testlib:21.0"
+    testCompile "io.kotlintest:kotlintest:1.3.5"
 }
