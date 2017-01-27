@@ -1,5 +1,5 @@
 data class QueueServiceRecord<out K, out V>(val key: K, val value: V)
-data class QueueServiceResponse<out K, out V>(val responseCode: ResponseCode, val record: QueueServiceRecord<K, V>)
+data class QueueServiceResponse<out K, out V>(val responseCode: ResponseCode, val record: QueueServiceRecord<K, V>?)
 
 enum class ResponseCode(val code: Int) {
     REQUEST_OK(0),
@@ -8,3 +8,4 @@ enum class ResponseCode(val code: Int) {
 
 // TODO: benchmark with jmh
 // TODO: histogram
+// TODO: kotlintest unit testing

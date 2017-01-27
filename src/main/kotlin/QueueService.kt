@@ -3,7 +3,7 @@
  * handling records of an arbitrary type T and
  * responses of an arbitrary type R.
  */
-interface QueueService<T, out R> {
+interface QueueService<in T, out R> {
 
     /**
      * Pushes a record onto the queue
@@ -16,7 +16,7 @@ interface QueueService<T, out R> {
      * Pulls a record from the queue
      * @return A record of type T
      */
-    fun pull(): T
+    fun pull(): R
 
     /**
      * Deletes a record from the queue
