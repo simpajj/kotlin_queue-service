@@ -64,4 +64,9 @@ class InMemoryQueueService<K, V> : QueueService<QueueServiceRecord<K, V>, QueueS
         cache.cleanUp()
         return cache.size()
     }
+
+    fun flush() {
+        queue.clear()
+        cache.invalidateAll()
+    }
 }

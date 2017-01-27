@@ -7,9 +7,7 @@ import java.util.concurrent.CompletableFuture
 import java.util.concurrent.Future
 
 class Consumer<K, V> {
-    val queue = InMemoryQueueService<K, V>()
-
-    fun consume(): Future<QueueServiceResponse<K, V>> {
+    fun consume(queue: InMemoryQueueService<K, V>): Future<QueueServiceResponse<K, V>> {
         return CompletableFuture
                 .supplyAsync { queue.pull() }
                 .thenApply { result ->
