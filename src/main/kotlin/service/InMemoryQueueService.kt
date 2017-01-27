@@ -21,7 +21,6 @@ class InMemoryQueueService<K, V> : QueueService<QueueServiceRecord<K, V>, QueueS
     constructor(evictionTime: Long, timeUnit: TimeUnit, ticker: Ticker) {
         cache = CacheBuilder
                 .newBuilder()
-                .ticker(ticker)
                 .expireAfterWrite(evictionTime, timeUnit)
                 .ticker(ticker)
                 .removalListener(listener)
