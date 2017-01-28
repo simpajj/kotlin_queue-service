@@ -5,19 +5,26 @@ buildscript {
     ext.kotlin_version = '1.0.5'
 
     repositories {
+        jcenter()
         mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.guava:guava-parent:21.0"
         classpath "com.google.guava:guava-testlib:21.0"
         classpath "io.kotlintest:kotlintest:1.3.5"
+        classpath "me.champeau.gradle:jmh-gradle-plugin:0.3.1"
     }
 }
 
 apply plugin: 'kotlin'
+apply plugin: 'me.champeau.gradle.jmh'
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
