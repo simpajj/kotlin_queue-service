@@ -22,6 +22,7 @@ buildscript {
 
 apply plugin: 'kotlin'
 apply plugin: 'me.champeau.gradle.jmh'
+apply plugin: 'idea'
 
 repositories {
     jcenter()
